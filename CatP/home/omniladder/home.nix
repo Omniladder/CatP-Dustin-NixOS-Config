@@ -1,32 +1,35 @@
-{ pkgs, ... }:
+{ ... }:
 {
-   home.stateVersion = "25.11";
+    home.stateVersion = "25.11";
+    programs.home-manager.enable = true;
 
-   imports = [
+    imports = [
        ../../profiles/user.nix
        ../../profiles/dev.nix
        ./packages.nix
        ./nvim_setup.nix
-   ];
+       ./load_eww.nix
+    ];
 
-    
+    home.username = "omniladder";
 
-   home.username = "omniladder";
-
-   programs.home-manager.enable = true;
-
-   programs.git = {
-        settings = {
-            user.name = "Omniladder";
-	        user.email = "dustintobrien@gmail.com";
-	    };
-   };
+    home.sessionVariables = {
+        NIXOS_OZONE_WL = "1";
+    };
 
 
+    programs.git.settings = {
+        user.name = "Omniladder";
+	    user.email = "dustintobrien@gmail.com";
+    };
     
     xdg.enable = true;
     
-    xdg.configFile."wallpapers/desktop.jpg".source = ./assets/desktop.jpg;
+    xdg.configFile."wallpapers/nix.png".source = ./assets/nix.png;
     xdg.configFile."niri/config.kdl".source = ./config/niri.kdl;
+    xdg.configFile."eww".source = ./config/eww;
+    home.file.".config/environment.d/10-ozone.conf".text = ''
+      NIXOS_OZONE_WL=1
+    '';
 
 }

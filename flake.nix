@@ -16,7 +16,6 @@
   	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 
-
 	nixosConfigurations.CatP = nixpkgs.lib.nixosSystem {
 	   modules = [
               ./CatP/hosts/DustinNix/configuration.nix

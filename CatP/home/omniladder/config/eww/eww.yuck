@@ -1,0 +1,11 @@
+(include "widgets/windowOne.yuck")
+
+(defwindow windowOne
+  :monitor 0
+  :geometry (geometry :x "20px" :y "2.5%" :width "560px" :height "95%")
+  :anchor "left top"
+  :stacking "fg"
+  :exclusive true
+  :wm-ignore false
+  :transparent true
+  (windowOne))

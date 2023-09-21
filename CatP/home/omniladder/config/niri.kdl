@@ -268,10 +268,10 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
+//spawn-at-startup "waybar"
 
-spawn-at-startup "swww" "--namespace" "niri" "img" "/home/omniladder/.config/wallpapers/desktop.jpg"
-
+spawn-at-startup "swww-daemon" "--namespace" "niri"
+spawn-at-startup "swww" "img" "--namespace" "niri" "/home/omniladder/.config/wallpapers/nix.png"
 
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
