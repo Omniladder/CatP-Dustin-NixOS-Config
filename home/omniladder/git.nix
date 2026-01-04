@@ -3,8 +3,8 @@
 {
   programs.git.config = {
     init = {
-       defaultBranch = "master"
+       defaultBranch = "master";
     };
-  }
+  };
 
 }
