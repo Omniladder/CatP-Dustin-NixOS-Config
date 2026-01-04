@@ -1,0 +1,15 @@
+*.lock
+
+/nix-result
+/.envrc
+/.direnv
+/result
+/result-*
+
+*~
+*.swp
+*.swp
+.DS_Store
+
+secrets.nix
+/secrets/
