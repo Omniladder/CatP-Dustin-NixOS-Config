@@ -1,10 +1,10 @@
 - [X] Enable Flakes
 - [X] Create Intial File Structure
 - [X] Install Git
-- [ ] Init and Push Git Repo
-- [ ] Download nvim
-- [ ] Track Code
-- [ ] Push to Github
+- [X] Init and Push Git Repo
+- [X] Download nvim
+- [X] Track Code
+- [X] Push to Github
 - [ ] OS Probe to Add Other OS
 - [ ] Set Grub Config Limit
 - [ ] Rice Grub
