@@ -8,5 +8,5 @@
       useOSProber = true;
       splashImage = ../../assets/images/grub.png;
    };
-   boot.loader.efi.canTouchEfiVariables = true;
+
 }

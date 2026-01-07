@@ -7,10 +7,9 @@
 
   networking.networkmanager.enable = true;
 
-  fileSystems."/boot" = {
-      device = "/dev/nvme0n1p1";
-      fsType = "vfat";
-      options = [ "nofail" ];
+  boot.loader.efi = {
+    canTouchEfiVariables = true;
+    efiSysMountPoint = "/boot";
   };
 
   # Set your time zone.
