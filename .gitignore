@@ -10,4 +10,5 @@
 .DS_Store
 
 secrets.nix
+hardware-configuration.nix
 /secrets/
