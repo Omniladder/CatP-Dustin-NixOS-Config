@@ -5,6 +5,5 @@
 - [X] Download nvim
 - [X] Track Code
 - [X] Push to Github
-- [ ] OS Probe to Add Other OS
-- [ ] Set Grub Config Limit
+- [X] OS Probe to Add Other OS
 - [ ] Rice Grub
