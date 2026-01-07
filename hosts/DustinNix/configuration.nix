@@ -8,7 +8,7 @@
   networking.networkmanager.enable = true;
 
   fileSystems."/boot" = {
-      device = "/dev/nvme0np1";
+      device = "/dev/nvme0n1p1";
       fsType = "vfat";
       options = [ "nofail" ];
   };
