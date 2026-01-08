@@ -2,8 +2,10 @@
 # Designed for any resolution
 
 # Global Property
-title-text: ""
-desktop-image: "./background.png"
+title-text: "Grub: Select OS to Boot"
+title-color: "#CDD6F4"
+title-font: "Chango Regular 16"
+desktop-image: "grub.png"
 desktop-image-scale-method: "stretch"
 desktop-color: "#1E1E2E"
 terminal-font: "Unifont Regular 16"
@@ -13,17 +15,10 @@ terminal-width: "100%"
 terminal-height: "100%"
 terminal-border: "0"
 
-# Logo image
-+ image {
-	left = 50%-50
-	top = 50%-50
-    file = "logo.png"
-}
-
 # Show the boot menu
 + boot_menu {
   left = 50%-240
-  top = 60%
+  top = 15%
   width = 480
   height = 30%
   item_font = "Unifont Regular 16"
@@ -40,7 +35,7 @@ terminal-border: "0"
 
 # Show a countdown message using the label component
 + label {
-  top = 82%
+  top = 87%
   left = 35%
   width = 30%
   align = "center"
