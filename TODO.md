@@ -15,4 +15,5 @@
     - [X] Add Catppuccin Background
     - [ ] Shrink Selection Area
     - [ ] Update font
+    - [ ] Change font color
     - [ ] Add Title?
