@@ -6,7 +6,7 @@
       efiSupport = true;
       device = "nodev";
       useOSProber = true;
-      splashImage = ../../assets/images/grub.png;
+      theme = ../../assets/grub_theme;
    };
 
 }
