@@ -5,6 +5,8 @@
      git
      neovim
      grub2
+     kdePackages.sddm
+     niri
    ];
 
 }
