@@ -15,6 +15,7 @@ terminal-width: "100%"
 terminal-height: "100%"
 terminal-border: "0"
 
+
 # Show the boot menu
 + boot_menu {
   left = 50%-240
@@ -31,7 +32,12 @@ terminal-border: "0"
   item_padding = 5
   item_spacing = 10
   selected_item_pixmap_style = "select_*.png"
+  background_color = "#CDD6F4"
+   menu_pixmap_style = "16x16Background.png"
+   border_color = "#CDD6F4"
+   border_width = 10
 }
+
 
 # Show a countdown message using the label component
 + label {

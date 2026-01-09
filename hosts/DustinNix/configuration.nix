@@ -8,7 +8,7 @@
   networking.networkmanager.enable = true;
 
   boot.loader.efi = {
-    canTouchEfiVariables = true;
+    canTouchEfiVariables = false;
     efiSysMountPoint = "/boot";
   };
 

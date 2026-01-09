@@ -7,5 +7,11 @@
       device = "nodev";
       useOSProber = true;
       theme = ./grub_theme;
+      efiInstallAsRemovable = true;
+      extraEntries = ''
+      menuentry "UEFI Firmware Settings" {
+         fwsetup
+      }
+      '';
    };
 }

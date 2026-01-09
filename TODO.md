@@ -6,18 +6,12 @@
 - [X] Track Code
 - [X] Push to Github
 - [X] OS Probe to Add Other OS
-- [ ] Rice Grub
+- [X] Rice Grub
+- [ ] Add UEFI Firmware Selection
+- [ ]  Add Border to Grub
 - [ ] Setup SDDM
 
 
 
-- [ ] Grub Rice
-    - [ ] Add UEFI Firmware Selection
-    - [X] Add Catppuccin Background
-    - [X] Shrink Selection Area
-    - [X] Update font
-    - [X] Change font color
-    - [X] Add Title?
-    - [X] Make Title big & in Bold
-    - [ ] Add Border To Selection Area
-
+BROKE THE BOOTLOADER COUNT:
+II
