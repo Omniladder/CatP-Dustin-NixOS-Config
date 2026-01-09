@@ -1,0 +1,2 @@
+- [ ] Add UEFI to bottom of Selection
+- [ ]  Add Border to Grub

@@ -5,9 +5,9 @@
       enable = true;
       efiSupport = true;
       device = "nodev";
-      useOSProber = true;
       theme = ./grub_theme;
       efiInstallAsRemovable = true;
+      useOSProber = true;
       extraEntries = ''
       menuentry "UEFI Firmware Settings" {
          fwsetup

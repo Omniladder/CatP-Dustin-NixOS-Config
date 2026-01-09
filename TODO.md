@@ -7,8 +7,7 @@
 - [X] Push to Github
 - [X] OS Probe to Add Other OS
 - [X] Rice Grub
-- [ ] Add UEFI Firmware Selection
-- [ ]  Add Border to Grub
+- [X] Add UEFI Firmware Selection
 - [ ] Setup SDDM
 
 
