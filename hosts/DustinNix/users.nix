@@ -10,7 +10,7 @@
 
   users.users.omniladder = {
     isNormalUser = true;
-    description = "My Default Account";
+    description = "Omniladder";
     extraGroups = [ "wheel" "networkmanager" ];
     createHome = true;
     home = "/home/omniladder";

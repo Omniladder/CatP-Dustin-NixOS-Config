@@ -7,6 +7,7 @@
      grub2
      kdePackages.sddm
      niri
+     bash
    ];
 
 }
