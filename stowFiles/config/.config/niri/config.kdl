@@ -1,0 +1,24 @@
+// Minimal Niri config.kdl
+
+// Input defaults (optional, but nice to specify your keyboard layout)
+input {
+    keyboard {
+        xkb {
+            layout "us"
+        }
+    }
+}
+
+// Key bindings
+binds {
+
+    // Close focused window
+    Super+C { close-window; }
+
+    // Open Firefox
+    Super+O { spawn "firefox"; }
+
+    // Open WezTerm
+    Super+Q { spawn "wezterm"; }
+
+}
