@@ -8,6 +8,9 @@
      kdePackages.sddm
      niri
      bash
+     firefox
+     wezterm
+     stow
    ];
 
 }

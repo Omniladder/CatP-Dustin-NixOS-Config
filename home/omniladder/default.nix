@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./packages.nix ./git.nix ./WM ];
+  imports = [ ./packages.nix ./git.nix ./WM ./applications ];
 }

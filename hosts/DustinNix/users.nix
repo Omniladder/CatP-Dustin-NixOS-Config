@@ -16,6 +16,8 @@
     home = "/home/omniladder";
     hashedPassword = "$y$j9T$Y2fOum6gb144UrheY6mMc0$AzU5wyf2UpJMY/2UZJXT0bjtRrNbTb5vqbVX/RERXPD";
   };
-
+  home-manager.users.omniladder = {
+     home.stateVersion = "24.11";
+  };
 }
 

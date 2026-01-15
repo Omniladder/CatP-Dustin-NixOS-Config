@@ -9,6 +9,10 @@
 - [X] Rice Grub
 - [X] Add UEFI Firmware Selection
 - [X] ADD SDDM
+- [ ] Add Home Manager
+- [ ] Install Firefox
+- [ ] Install Wezterm
+- [ ] enable firefox and wez term from niri
 - [ ] Setup SDDM
 
 - [ ] Setup SDDM Checklist
