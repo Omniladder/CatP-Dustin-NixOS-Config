@@ -1,1 +1,5 @@
-sudo nixos-rebuild switch --flake .#CatP
+
+
+
+
+sudo nixos-rebuild switch --flake .#CatP 

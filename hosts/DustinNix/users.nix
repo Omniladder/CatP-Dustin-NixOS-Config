@@ -4,9 +4,18 @@
 {
 
    users.mutableUsers = false;
+
+   users.groups.omniladder = {};
+
    users.users.omniladder = {
      isNormalUser = true;
+     home = "/home/omniladder";
+
+     group = "omniladder";
+
      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+
+     # TODO: Move packages to home manager
      packages = with pkgs; [
        git
        neovim

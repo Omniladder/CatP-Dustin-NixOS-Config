@@ -11,23 +11,26 @@
 
   outputs = { self, nixpkgs, home-manager, ... }: 
      let
-        system = "x86_64-linux";
-     in {
- 
-  	nix.settings.experimental-features = [ "nix-command" "flakes" ];
-       
-	nixosConfigurations.CatP = nixpkgs.lib.nixosSystem {
-           inherit system;
-	   modules = [
-               ./CatP
+	   system.stateVersion = "25.11";
 
+     in {
+
+  	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+
+
+	nixosConfigurations.CatP = nixpkgs.lib.nixosSystem {
+
+	   system = "x86_64-linux";
+	   modules = [
+              ./hosts/DustinNix/configuration.nix
 	       home-manager.nixosModules.home-manager {
                    home-manager.useGlobalPkgs = true;
 	           home-manager.useUserPackages = true;
-
-		   home-manager.users.omniladder = import ./CatP/home/omniladder/home.nix;
+		   home-manager.users.omniladder = {
+		       imports = [ ./CatP/home/omniladder/home.nix ];
+		   };
 	       }
-
            ];
 	};
      };

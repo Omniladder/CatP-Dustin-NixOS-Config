@@ -1,0 +1,1 @@
+- [ ] Set home manager to 25.11

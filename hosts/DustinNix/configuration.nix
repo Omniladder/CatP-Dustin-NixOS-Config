@@ -5,15 +5,16 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
+
+
+    imports =
+    [       
       ./hardware-configuration.nix
       ./users.nix
-      ./modules/boot/systemd.nix
+      ../../CatP/profiles/system/system.nix
     ];
 
   networking.hostName = "DustinNix"; # Define your hostname.
-  system.stateVersion = "25.11"; # Did you read the comment?
-
+     
 }
 
