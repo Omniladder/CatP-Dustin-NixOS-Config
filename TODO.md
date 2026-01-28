@@ -1,1 +1,1 @@
-- [ ] Set home manager to 25.11
+- [X] Set home manager to 25.11
