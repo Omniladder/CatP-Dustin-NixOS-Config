@@ -10,9 +10,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }: 
-     let
-
-     in {
+     {
   	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 	nixosConfigurations.CatP = nixpkgs.lib.nixosSystem {
