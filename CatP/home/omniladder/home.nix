@@ -4,10 +4,19 @@
    home.stateVersion = "25.11";
 
    imports = [
-       ../../profiles/user/user.nix
+       ../../profiles/user.nix
+       ../../profiles/dev.nix
    ];
 
    home.username = "omniladder";
 
    programs.home-manager.enable = true;
+
+   programs.git = {
+        settings = {
+           user.name = "Omniladder";
+	   user.email = "dustintobrien@gmail.com";
+	};
+   };
+
 }

@@ -15,12 +15,8 @@
 
      extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
 
-     # TODO: Move packages to home manager
-     packages = with pkgs; [
-       git
-       neovim
-     ];
      initialHashedPassword = "$y$j9T$gK2JTzIjPE1v0KTmnfjJ10$/QueLfNRW9Kz2CM7mcEtJOMhhJY3MOwlcfxZOQCANq7";
+
    };
 
 

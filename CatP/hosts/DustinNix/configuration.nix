@@ -11,7 +11,7 @@
     [       
       ./hardware-configuration.nix
       ./users.nix
-      ../../profiles/system/system.nix
+      ../../profiles/system.nix
     ];
   system.stateVersion = "25.11";
   networking.hostName = "DustinNix"; # Define your hostname.
