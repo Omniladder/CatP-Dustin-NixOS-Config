@@ -6,6 +6,7 @@
    imports = [
        ../../profiles/user.nix
        ../../profiles/dev.nix
+       ./keybind.nix
    ];
 
    home.username = "omniladder";
