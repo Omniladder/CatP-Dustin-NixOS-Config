@@ -13,12 +13,15 @@
      {
   	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+
+
 	nixosConfigurations.CatP = nixpkgs.lib.nixosSystem {
 	   modules = [
               ./CatP/hosts/DustinNix/configuration.nix
 	       home-manager.nixosModules.home-manager {
                    home-manager.useGlobalPkgs = true;
 	           home-manager.useUserPackages = true;
+                   home-manager.backupFileExtension = "hm-bak";
 		   home-manager.users.omniladder = {
 		       imports = [ ./CatP/home/omniladder/home.nix ];
 		   };

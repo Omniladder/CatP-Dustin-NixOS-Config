@@ -6,7 +6,6 @@
    imports = [
        ../../profiles/user.nix
        ../../profiles/dev.nix
-       ./keybind.nix
    ];
 
    home.username = "omniladder";
@@ -19,5 +18,7 @@
 	   user.email = "dustintobrien@gmail.com";
 	};
    };
+
+   xdg.configFile."niri/config.kdl".source = ./config/niri.kdl;
 
 }

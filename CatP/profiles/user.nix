@@ -2,5 +2,6 @@
 
 {
    imports = [
+      ../modules/browser/firefox.nix
    ];
 }
