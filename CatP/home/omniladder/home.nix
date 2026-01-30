@@ -20,5 +20,9 @@
    };
 
    xdg.configFile."niri/config.kdl".source = ./config/niri.kdl;
+   xdg.configFile."nvim".source = ./config/nvim-config;
+   programs.neovim.defaultEditor = true;
+
+
 
 }
