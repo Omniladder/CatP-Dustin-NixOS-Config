@@ -2,7 +2,7 @@
 
 {
    imports = [
-       ../modules/system/systemd.nix
+       ../modules/system/grub.nix
        ../modules/system/home-manager.nix
        ../modules/network/networkManager.nix
        ../modules/desktop/sddm.nix
