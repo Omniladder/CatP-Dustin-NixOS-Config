@@ -7,9 +7,11 @@
         url = "github:nix-community/home-manager/release-25.11";
 	inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvim-config.url = "github:Omniladder/nvim-config";
+    nvim-config.flake = false;
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: 
+  outputs = { self, nixpkgs, home-manager, nvim-config, ... }@inputs: 
      {
   	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -22,6 +24,11 @@
                    home-manager.useGlobalPkgs = true;
 	           home-manager.useUserPackages = true;
                    home-manager.backupFileExtension = "hm-bak";
+
+		   home-manager.extraSpecialArgs = {
+		      inherit inputs;
+		   };
+		   
 		   home-manager.users.omniladder = {
 		       imports = [ ./CatP/home/omniladder/home.nix ];
 		   };

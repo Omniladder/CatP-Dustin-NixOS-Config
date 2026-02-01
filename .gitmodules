@@ -1,0 +1,3 @@
+[submodule "CatP/home/omniladder/config/nvim-config"]
+	path = CatP/home/omniladder/config/nvim-config
+	url = git@github.com:Omniladder/nvim-config.git
