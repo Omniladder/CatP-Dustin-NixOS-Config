@@ -398,7 +398,7 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+SHIFT+O repeat=false { toggle-overview; }
 
-    Mod+Q { spawn "wezterm"; }
+    Mod+Q { spawn "alacritty"; }
     Mod+O { spawn "firefox"; }
     Mod+C { close-window; }
 
