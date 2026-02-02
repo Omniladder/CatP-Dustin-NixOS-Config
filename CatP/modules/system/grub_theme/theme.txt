@@ -4,7 +4,7 @@
 # Global Property
 title-text: "Grub: Select OS to Boot"
 title-color: "#CDD6F4"
-title-font: "Chango Regular 16"
+title-font: "Rubik Regular 22"
 desktop-image: "grub.png"
 desktop-image-scale-method: "stretch"
 desktop-color: "#1E1E2E"
