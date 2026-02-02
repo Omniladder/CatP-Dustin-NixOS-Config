@@ -1,4 +1,4 @@
-{ config, pkgs, home, inputs, ... }:
+{ ... }:
 
 {
    home.stateVersion = "25.11";
@@ -6,6 +6,7 @@
    imports = [
        ../../profiles/user.nix
        ../../profiles/dev.nix
+       ./nvim_setup.nix
    ];
 
    home.username = "omniladder";
@@ -20,9 +21,4 @@
    };
 
    xdg.configFile."niri/config.kdl".source = ./config/niri.kdl;
-
-
-   xdg.configFile."nvim".source = inputs.nvim-config;
-   programs.neovim.defaultEditor = true;
-
 }
