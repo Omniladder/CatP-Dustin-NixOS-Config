@@ -1,4 +1,4 @@
-// This config is in the KDL format: https://kdl.devcon
+// This config is in the KDL format: https://kdl.devconcon
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
@@ -272,12 +272,14 @@ spawn-at-startup "waybar"
 
 spawn-at-startup "swww" "--namespace" "niri" "img" "/home/omniladder/.config/wallpapers/desktop.jpg"
 
+
+
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-    // skip-at-startup
+    skip-at-startup
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
