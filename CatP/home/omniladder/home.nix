@@ -9,6 +9,8 @@
        ./nvim_setup.nix
    ];
 
+    
+
    home.username = "omniladder";
 
    programs.home-manager.enable = true;
@@ -19,6 +21,7 @@
 	        user.email = "dustintobrien@gmail.com";
 	    };
    };
+
 
     
     xdg.enable = true;

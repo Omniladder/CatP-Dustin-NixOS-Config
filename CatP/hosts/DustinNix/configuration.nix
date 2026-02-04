@@ -15,6 +15,9 @@
     ];
   system.stateVersion = "25.11";
   networking.hostName = "DustinNix"; # Define your hostname.
+
+
+    time.timeZone = "America/New_York";
      
 }
 
