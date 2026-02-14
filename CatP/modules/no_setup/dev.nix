@@ -6,5 +6,6 @@
         cargo
         go
         nodejs
+        brightnessctl
     ];
 }

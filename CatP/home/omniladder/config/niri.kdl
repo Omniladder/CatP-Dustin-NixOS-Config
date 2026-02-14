@@ -271,7 +271,7 @@ layout {
 //spawn-at-startup "waybar"
 
 spawn-at-startup "swww-daemon" "--namespace" "niri"
-spawn-at-startup "swww" "img" "--namespace" "niri" "/home/omniladder/.config/wallpapers/nix.png"
+spawn-at-startup "swww" "img" "--namespace" "niri" "/home/omniladder/.config/wallpapers/nix.png" "--transition-type" "none"
 
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
