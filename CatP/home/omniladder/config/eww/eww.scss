@@ -1,0 +1,299 @@
+/* Catppuccin Mocha Color Palette */
+* {
+  letter-spacing: 0;
+  font-family: sans-serif;
+  background-color: transparent;
+}
+
+window {
+  letter-spacing: 0;
+  background-color: transparent;
+  background: transparent;
+}
+
+.left-panel-wrapper {
+  letter-spacing: 0;
+  background-color: rgba(17, 17, 27, 0.9); /* crust - darker and more opaque for better contrast */
+  border-radius: 20px;
+  border: 2px solid rgba(89, 180, 250, 0.3); /* blue accent border for distinction */
+  min-width: 400px;
+}
+
+.quote-wrapper {
+  background-color: transparent;
+}
+
+.left-panel {
+  /*border: 1px solid red;*/
+  letter-spacing: 0;
+  background-color: transparent;
+  background: transparent;
+}
+
+.left-panel box {
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+  background: transparent;
+}
+
+.left-panel label {
+  letter-spacing: 0;
+  background-color: transparent;
+  background: transparent;
+}
+
+.clock-section {
+  letter-spacing: 0;
+  background-color: transparent;
+}
+
+.clock-time {
+  letter-spacing: 0;
+  background-color: transparent;
+  font-size: 64px;
+  font-weight: bold;
+  color: #89b4fa; /* blue */
+  font-family: "JetBrains Mono", monospace;
+}
+
+.clock-date {
+  letter-spacing: 0;
+  background-color: transparent;
+  font-size: 36px;
+  font-weight: bold;
+  color: #a6e3a1; /* green - fancy color */
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 1px;
+}
+
+.top-section {
+  margin-top: 17px;
+  letter-spacing: 0;
+  background-color: transparent;
+}
+
+.weather-info {
+  margin-top: 17px;
+  letter-spacing: 0;
+  background-color: transparent;
+  padding-bottom: 18px;
+}
+
+.divider {
+  /*border: 1px solid red;*/
+  border-bottom: 2px solid #313244;
+}
+
+.weather-box {
+  letter-spacing: 0;
+  background-color: rgba(49, 50, 68, 0.3); /* surface0 with transparency */
+  border-radius: 10px;
+}
+
+
+.weather-item {
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+}
+
+.weather-icon {
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+  font-size: 60px;
+}
+
+.weather-details {
+  letter-spacing: 0;
+  background-color: transparent;
+}
+
+.weather-text {
+  letter-spacing: 0;
+  background-color: transparent;
+  font-size: 30px;
+  color: #cdd6f4; /* text */
+  font-weight: 500;
+}
+
+.sun-times {
+  letter-spacing: 0;
+  background-color: rgba(49, 50, 68, 0.3);
+  border-radius: 10px;
+}
+
+.sun-item {
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+}
+
+.sun-icon {
+  letter-spacing: 0;
+  background-color: transparent;
+  font-size: 28px;
+}
+
+.sun-text {
+  letter-spacing: 0;
+  background-color: transparent;
+  font-size: 30px;
+  color: #cdd6f4;
+}
+
+.bottom-section {
+  letter-spacing: 0;
+  background-color: transparent;
+}
+
+.quote-box {
+  letter-spacing: 0;
+  background-color: rgba(49, 50, 68, 0.3); /* surface0 with transparency */
+  border-radius: 10px;
+}
+
+.quote-text {
+  letter-spacing: 0;
+  background-color: transparent;
+  font-size: 18px;
+  color: #bac2de; /* subtext1 */
+  font-style: italic;
+}
+
+.system-info {
+  min-width: 0;
+  margin-bottom: 10px;
+  letter-spacing: 0;
+  background-color: transparent;
+  margin-top: 35px;
+}
+
+.system-column{
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+}
+
+.system-box {
+  /*border: 1px solid red;*/
+  margin-bottom: 20px;
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: rgba(49, 50, 68, 0.3); /* surface0 with transparency */
+  border-radius: 8px;
+}
+
+.system-icon {
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+  font-size: 36px;
+  color: #89b4fa; /* blue accent - matches clock-time */
+  font-family: "Font Awesome 7 Free Solid", "Font Awesome 7 Free", "Font Awesome 7 Free", sans-serif;
+  font-weight: 900; /* solid icons */
+  font-style: normal;
+  margin-right: 20px;
+}
+
+.system-details {
+  /*border: 1px solid red;*/
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+}
+
+.system-text {
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+  font-size: 17px;
+  color: #cdd6f4; /* text - matches weather-text */
+  font-weight: 500;
+}
+
+.slider-container {
+  /*border: 1px solid red;*/
+  min-width: 0;
+  letter-spacing: 0;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  background-color: transparent;
+}
+
+.slider-box {
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: rgba(49, 50, 68, 0.3); /* surface0 with transparency */
+  border-radius: 8px;
+}
+
+.slider-label {
+  min-width: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+  font-size: 17px;
+  color: #bac2de; /* subtext1 */
+  font-weight: 500;
+}
+
+.slider-scale-wrapper {
+  min-width: 0px;
+  letter-spacing: 0;
+  background-color: transparent;
+}
+
+.slider-scale {
+  min-width: 0;
+  min-height: 20px;
+  letter-spacing: 0;
+  background-color: transparent;
+}
+
+
+.slider-scale trough {
+  min-height: 6px;
+  background-color: #313244; /* surface0 */
+  border-radius: 10px;
+}
+
+.slider-scale highlight {
+  background-color: #a6e3a1; /* green accent */
+  border-radius: 10px;
+}
+
+.slider-scale slider {
+  min-width: 16px;
+  min-height: 16px;
+  background-color: #a6e3a1; /* green accent */
+  border-radius: 50%;
+}
+
+.power-actions-container {
+  min-width: 0px;
+  padding: 15px;
+  background-color: transparent;
+  letter-spacing: 0;
+  margin-top: 27px;
+}
+
+
+.power-button {
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 8px;
+  border: 1px solid rgba(49, 50, 68, 0.8);
+  padding: 8px;
+
+  background: #9399b2; /* text/icon color */
+}
+
+.power-button-icon {
+  font-size: 24px;
+  font-family: "Font Awesome 7 Free Solid", "Font Awesome 7 Free", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+
+}
+

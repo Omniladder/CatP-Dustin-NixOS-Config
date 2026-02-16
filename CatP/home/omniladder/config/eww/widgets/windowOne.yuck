@@ -1,0 +1,429 @@
+
+(defpoll TIME :interval "1s"
+ "date +%H:%M:%S")
+
+(defpoll DATE :interval "30s"
+ "date '+%A, %B %d'")
+
+(defpoll WEATHER :interval "15m"
+ "./scripts/weather.sh")
+
+(defpoll SUNRISE :interval "1h"
+ "./scripts/sunrise.sh")
+
+(defpoll SUNSET :interval "1h"
+ "./scripts/sunset.sh")
+
+
+;; ----------------------------
+;; System Info Polls
+;; ----------------------------
+
+(defpoll BATTERY :interval "5s"
+ "./scripts/get_battery.sh")
+
+(defpoll RAM_USAGE :interval "5s"
+ "./scripts/get_ram.sh")
+
+(defpoll CPU_USAGE :interval "2s"
+ "./scripts/get_cpu.sh")
+
+(defpoll DISK_USAGE :interval "30s"
+ "./scripts/get_disk.sh")
+
+(defpoll NETWORK_UP :interval "5s"
+ "./scripts/get_network_up.sh")
+
+(defpoll NETWORK_DOWN :interval "5s"
+ "./scripts/get_network_down.sh")
+
+(defpoll UPTIME :interval "30s"
+ "./scripts/get_uptime.sh")
+
+
+;; ----------------------------
+;; Other Polls
+;; ----------------------------
+
+(defpoll BRIGHTNESS :interval "2s"
+ "./scripts/get_brightness.sh")
+
+(defpoll VOLUME :interval "2s"
+ "./scripts/get_volume.sh")
+
+
+;; ----------------------------
+;; Main Widget
+;; ----------------------------
+
+(defwidget windowOne []
+ (box :class "left-panel-wrapper"
+   :vfill true
+   :vexpand true
+   :space-evenly false
+   :orientation "vertical"
+
+  (box :class "left-panel" 
+   :orientation "vertical"
+   :valign "start"
+   :vexpand true
+   :space-evenly false
+
+
+   ;; ----------------------------
+   ;; Top Section
+   ;; ----------------------------
+
+   (box :class "top-section"
+    :orientation "vertical"
+    :space-evenly false
+    :vexpand false
+
+
+    ;; ----------------------------
+    ;; Clock
+    ;; ----------------------------
+
+    (box :class "clock-section"
+     :orientation "vertical"
+     :vexpand false
+
+     (label :text {TIME} :class "clock-time")
+     (label :text {DATE} :class "clock-date")
+    )
+    (box :class "divider" :halign "center" :width 450)
+
+
+    ;; ----------------------------
+    ;; Weather + Sunrise/Sunset
+    ;; ----------------------------
+
+    ;; WEATHER WRAPPER (adds extra spacing only here)
+    (box 
+    :orientation "vertical"
+
+     (box :class "weather-info"
+      :orientation "vertical"
+      :vexpand false
+      :hexpand true
+
+      ;; Current Weather
+      (box :class "weather-box"
+       :halign "center"
+       :orientation "horizontal"
+
+       (box :class "weather-item"
+        :halign "start"
+        :space-evenly false
+
+        (label :text "🌤️" :class "weather-icon")
+        (label :text {WEATHER} :class "weather-text")
+       )
+      )
+
+      ;; Sunrise / Sunset Times
+      (box :class "sun-times"
+       :orientation "horizontal"
+       :halign "center"
+       :spacing 40
+
+       (box :class "sun-item"
+        :orientation "horizontal"
+        :halign "start"
+        :space-evenly false
+
+        (label :text "🌅" :class "sun-icon")
+        (label :text {SUNRISE} :class "sun-text")
+       )
+
+       (box :class "sun-item"
+        :orientation "horizontal"
+        :halign "start"
+        :space-evenly false
+
+        (label :text "🌇" :class "sun-icon")
+        (label :text {SUNSET} :class "sun-text")
+       )
+      )
+     )
+    )
+    (box :class "divider" :halign "center" :width 450)
+   )
+
+ 
+   ;; ----------------------------
+   ;; System Info Section
+   ;; ----------------------------
+
+;    (box :class "system-wrapper"
+;     :orientation "vertical"
+;     :vexpand false
+;     :valign "start"
+;     :vfill false
+   (box :class "system-info"
+    :orientation "horizontal"
+    :vexpand false
+     :valign "start"
+    :hexpand false
+
+
+    ;; ----------------------------
+    ;; Row 1: Battery, RAM Usage
+    ;; ----------------------------
+
+    (box :class "system-column"
+     :halign "center"
+     :orientation "vertical"
+     :space-evenly false
+      :spacing 15
+     :vexpand false
+     :hexpand false
+     :valign "start"
+
+     (box :class "system-box"
+      :orientation "horizontal"
+      :space-evenly false
+      :valign "center"
+
+      (label :text "" :class "system-icon")
+
+      (box :class "system-details"
+       :orientation "vertical"
+       (label :text {BATTERY} :class "system-text")
+      )
+     )
+
+
+     (box :class "system-box"
+      :orientation "horizontal"
+      :space-evenly false
+
+      (label :text "" :class "system-icon")
+
+      (box :class "system-details"
+       :orientation "vertical"
+       (label :text {CPU_USAGE} :class "system-text")
+      )
+     )
+    (box :class "system-box"
+      :orientation "horizontal"
+      :space-evenly false
+       :valign "center"
+
+      (label :text "" :class "system-icon")
+
+      (box :class "system-details"
+       :orientation "vertical"
+       :spacing 10
+
+       (label :text {NETWORK_UP} :class "system-text")
+       (label :text {NETWORK_DOWN} :class "system-text")
+      )
+     )
+     
+    )
+
+
+    ;; ----------------------------
+    ;; Row 2: CPU Usage, Disk Usage
+    ;; ----------------------------
+
+    (box :class "system-column"
+     :valign "start"
+       :halign "center"
+      :space-evenly false
+      :vexpand false
+      :orientation "vertical"
+      :spacing 15
+
+
+     (box :class "system-box"
+      :orientation "horizontal"
+      :valign "center"
+      :space-evenly false
+      :vexpand false
+
+      (label :text "" :class "system-icon")
+
+      (box :class "system-details"
+       :orientation "vertical"
+       :valign "center"
+       :vexpand false
+       (label :text {DISK_USAGE} :class "system-text")
+      )
+     )
+    (box :class "system-box"
+      :orientation "horizontal"
+      :space-evenly false
+
+      (label :text "" :class "system-icon")
+
+      (box :class "system-details"
+       :orientation "vertical"
+       (label :text {RAM_USAGE} :class "system-text")
+      )
+     )
+     (box :class "system-box"
+      :orientation "horizontal"
+      :space-evenly false
+      :valign "center"
+
+      (label :text "" :class "system-icon")
+
+      (box :class "system-details"
+       :orientation "vertical"
+       (label :text {UPTIME} :class "system-text")
+      )
+     )
+    )
+    )
+    (box :class "divider"  :valign "start" :halign "center" :width 450 :vexpand false)
+;   )
+
+   ;; ----------------------------
+   ;; Bottom Section 
+   ;; ----------------------------
+
+   (box :class "bottom-section"
+
+
+   ;; ----------------------------
+   ;; Sliders
+   ;; ----------------------------
+
+;   (box :class "slider-container"
+;    :orientation "vertical"
+;    :vexpand false
+;     :spacing 10
+;
+;    ;; brightness slider
+;    (box :class "slider-box"
+;     :orientation "vertical"
+;
+;     (label :text "brightness:" :class "slider-label")
+;
+;     (box :class "slider-scale-wrapper"
+;      (scale :class "slider-scale"
+;       :hexpand false
+;       :orientation "h"
+;       :width 10
+;       :min 0
+;       :max 100
+;       :value {brightness}
+;       :onchange "./scripts/set_brightness.sh {}"
+;      )
+;     )
+;    )
+;
+;    ;; volume slider
+;    (box :class "slider-box"
+;     :orientation "vertical"
+;     :space-evenly false
+;     :width 10
+;
+;     (label :text "volume:" :class "slider-label")
+;
+;     (box :class "slider-scale-wrapper"
+;      (scale :class "slider-scale"
+;       :orientation "h"
+;       :hexpand false
+;       :halign "center"
+;       :width 10
+;       :min 0
+;       :max 100
+;       :value {volume}
+;       :onchange "./scripts/set_volume.sh {}"
+;      )
+;     )
+;    )
+;   )
+
+(box :class "slider-container"
+  :orientation "vertical"
+  :hexpand false
+  :halign "center"
+  :vexpand false
+  :spacing 10
+
+  ;; brightness slider
+  (box :class "slider-box"
+    :orientation "vertical"
+    :hexpand false
+    :halign "start"
+
+    (label :text "brightness:" :class "slider-label")
+
+    (box :class "slider-scale-wrapper"
+      :hexpand false
+      :halign "start"
+      (scale :class "slider-scale"
+        :width 400
+        :hexpand false
+        :halign "start"
+        :orientation "h"
+        :min 0
+        :max 100
+        :value {BRIGHTNESS}
+        :onchange "./scripts/set_brightness.sh {}"
+      )
+    )
+  )
+
+  ;; volume slider
+  (box :class "slider-box"
+    :orientation "vertical"
+    :hexpand false
+    :halign "center"
+
+    (label :text "volume:" :class "slider-label")
+
+    (box :class "slider-scale-wrapper"
+      :hexpand false
+      :halign "center"
+      (scale :class "slider-scale"
+        :width 400
+        :hexpand false
+        :halign "start"
+        :orientation "h"
+        :min 0
+        :max 100
+        :value {VOLUME}
+        :onchange "./scripts/set_volume.sh {}"
+      )
+    )
+  )
+)
+   )
+    (box :class "divider" :halign "center" :width 450)
+
+   ;; ----------------------------
+   ;; Power Actions
+   ;; ----------------------------
+   
+   (box :class "power-actions-container"
+    :orientation "horizontal"
+    :halign "center"
+    :spacing 50
+    :vexpand false
+    (button :class "power-button"
+     :onclick "./scripts/shutdown.sh"
+     (label :text "" :class "power-button-icon"))
+    
+    
+    
+    (button :class "power-button"
+     :onclick "./scripts/reboot.sh"
+     (label :text "" :class "power-button-icon"))
+
+    (button :class "power-button"
+     :onclick "./scripts/logout.sh"
+     (label :text "" :class "power-button-icon"))
+
+    (button :class "power-button"
+     :onclick "./scripts/lock.sh"
+     (label :text "" :class "power-button-icon"))
+    
+    )
+)
+)
+)
