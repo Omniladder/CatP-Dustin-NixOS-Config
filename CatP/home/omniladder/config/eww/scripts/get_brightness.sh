@@ -1,49 +1,13 @@
 #!/bin/sh
-# Get current brightness as percentage (0-100)
 
-# Try brightnessctl first (most common on modern systems)
-if command -v brightnessctl >/dev/null 2>&1; then
-  brightness=$(brightnessctl get 2>/dev/null)
-  max=$(brightnessctl max 2>/dev/null)
-  if [ -n "$brightness" ] && [ -n "$max" ] && [ "$max" -gt 0 ]; then
-    echo "$((brightness * 100 / max))"
-    exit 0
-  fi
+if command -v wpctl >/dev/null 2>&1; then
+  vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null | awk '{print $2}')
+  [ -n "$vol" ] && awk "BEGIN { printf \"%.0f\n\", $vol * 100 }" && exit 0
 fi
 
-# Try light command
-if command -v light >/dev/null 2>&1; then
-  brightness=$(light -G 2>/dev/null | cut -d. -f1)
-  if [ -n "$brightness" ]; then
-    echo "$brightness"
-    exit 0
-  fi
+if command -v pactl >/dev/null 2>&1; then
+  vol=$(pactl get-sink-volume @DEFAULT_SINK@ 2>/dev/null | grep -oE '[0-9]+%' | head -n1 | tr -d '%')
+  [ -n "$vol" ] && echo "$vol" && exit 0
 fi
 
-# Try xbacklight
-if command -v xbacklight >/dev/null 2>&1; then
-  brightness=$(xbacklight -get 2>/dev/null | cut -d. -f1)
-  if [ -n "$brightness" ]; then
-    echo "$brightness"
-    exit 0
-  fi
-fi
-
-# Try sysfs directly
-if [ -d /sys/class/backlight ]; then
-  for backlight in /sys/class/backlight/*; do
-    if [ -f "$backlight/brightness" ] && [ -f "$backlight/max_brightness" ]; then
-      brightness=$(cat "$backlight/brightness" 2>/dev/null)
-      max=$(cat "$backlight/max_brightness" 2>/dev/null)
-      if [ -n "$brightness" ] && [ -n "$max" ] && [ "$max" -gt 0 ]; then
-        echo "$((brightness * 100 / max))"
-        exit 0
-      fi
-    fi
-  done
-fi
-
-# Fallback: return 50 if nothing works
-echo "50"
-exit 1
-
+echo 0
