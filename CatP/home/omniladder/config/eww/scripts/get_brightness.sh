@@ -10,4 +10,4 @@ if command -v pactl >/dev/null 2>&1; then
   [ -n "$vol" ] && echo "$vol" && exit 0
 fi
 
-echo 0
+echo '0'

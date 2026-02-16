@@ -18,4 +18,4 @@ if command -v pactl >/dev/null 2>&1; then
 fi
 
 # If nothing works, return 0
-echo 0
+echo '0'

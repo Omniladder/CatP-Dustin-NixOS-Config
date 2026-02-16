@@ -4,17 +4,19 @@
     systemd.user.services.eww-widgets = {
       Unit = {
         Description = "Open Eww widgets";
-        After = [ "eww-daemon.service" ];
+        After = [ "graphical-session.service" ];
         Requires = [ "eww-daemon.service" ];
+        PartOf = [ "graphical-session.service" ];
       };
     
       Service = {
-        Type = "oneshot";
-        ExecStart = "${pkgs.eww}/bin/eww open windowOne";
+        ExecStart = "${pkgs.eww}/bin/eww daemon --no-daemonize";
+        ExecStartPost = "${pkgs.eww}/bin/eww open windowOne";
+        Restart = "on-failure";
       };
     
       Install = {
-        WantedBy = [ "default.target" ];
+        WantedBy = [ "graphical-session.target" ];
       };
     };
 }
