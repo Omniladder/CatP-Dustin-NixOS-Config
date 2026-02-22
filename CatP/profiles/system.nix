@@ -7,5 +7,6 @@
        ../modules/system/sddm.nix
        ../modules/network/networkManager.nix
        ../modules/desktop/niri.nix
+       ../modules/no_setup/system.nix
    ];
 }

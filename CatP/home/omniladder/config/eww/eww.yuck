@@ -2,7 +2,7 @@
 
 (defwindow windowOne
   :monitor 0
-  :geometry (geometry :x "0.5%" :y "2.5%" :width "550px" :height "95%")
+  :geometry (geometry :x "3%" :y "2.5%" :width "550px" :height "95%")
   :anchor "center top"
   :stacking "bottom"
   :exclusive false
