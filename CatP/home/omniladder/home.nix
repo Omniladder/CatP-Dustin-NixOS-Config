@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
     home.stateVersion = "25.11";
     programs.home-manager.enable = true;
@@ -14,10 +14,30 @@
     home.username = "omniladder";
     fonts.fontconfig.enable = true;
 
-    home.sessionVariables = {
-        NIXOS_OZONE_WL = "1";
+    home.pointerCursor = {
+        gtk.enable = true;
+        x11.enable = true;
+
+        package = pkgs.catppuccin-cursors.mochaDark;
+        name = "catppuccin-mocha-dark-cursors";
+
+        size = 24;
     };
 
+    home.sessionVariables = {
+        NIXOS_OZONE_WL = "1";
+        XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
+        XCURSOR_SIZE = "24";
+    };
+
+  gtk = {
+    enable = true;
+    cursorTheme = {
+      package = pkgs.catppuccin-cursors.mochaDark;
+      name = "catppuccin-mocha-dark-cursors";
+      size = 24;
+    };
+  };
 
     programs.git.settings = {
         user.name = "Omniladder";

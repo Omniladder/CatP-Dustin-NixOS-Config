@@ -1,0 +1,21 @@
+
+## Setup Program
+
+File Explorer: Dolphin
+Notification Daemon: Mako
+Authentication Agent: Polkit & HyprPolkitAgent
+Browser: Zen, Firefox, Chromium (In Case)
+Clipboard: WL_Paste
+App Launch: Wofi
+Terminal: Wezterm & Kitty (Backup)
+Bluetooth: Bluez (Backend/Low-level) & Blueman
+Email: Thunderbird
+Idle Manager: Hypridle
+Catpuccin Cursor
+Screen Locker: Swaylock
+Image Viewer: Loupe
+Theme: lxappearance (Manager), Grubbox-dark (Scheme)
+Power Menu: wlogout
+Multiplexer: tmux
+Widget System: eww widgets
+
