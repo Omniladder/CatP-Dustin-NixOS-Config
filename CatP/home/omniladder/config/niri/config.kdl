@@ -373,6 +373,7 @@ binds {
 
     Mod+Q { spawn "alacritty"; }
     Mod+O { spawn "firefox"; }
+    Mod+E { spawn "rofi" "-show" "drun"; }
     Mod+C { close-window; }
 
     Mod+Left  { focus-column-left; }
