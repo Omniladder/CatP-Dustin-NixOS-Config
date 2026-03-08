@@ -244,7 +244,6 @@ layout {
 spawn-at-startup "swww-daemon" "--namespace" "niri"
 spawn-at-startup "swww" "img" "--namespace" "niri" "/home/omniladder/.config/wallpapers/nix.png" "--transition-type" "none"
 
-
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
@@ -330,7 +329,7 @@ binds {
     // when running as a winit window.
     //
     // Most actions that you can bind here can also be invoked programmatically with
-    // `niri msg action do-something`.
+    // `niri msg action do-something`. 
 
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
@@ -363,6 +362,8 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+SHIFT+O repeat=false { toggle-overview; }
 
+
+
     Mod+Q { spawn "alacritty"; }
     Mod+O { spawn "firefox"; }
     Mod+C { close-window; }
@@ -384,13 +385,6 @@ binds {
     Mod+Ctrl+J     { move-window-down; }
     Mod+Ctrl+K     { move-window-up; }
     Mod+Ctrl+L     { move-column-right; }
-
-    // Alternative commands that move across workspaces when reaching
-    // the first or last window in a column.
-    // Mod+J     { focus-window-or-workspace-down; }
-    // Mod+K     { focus-window-or-workspace-up; }
-    // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-    // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }

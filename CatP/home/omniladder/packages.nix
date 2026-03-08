@@ -5,5 +5,8 @@
     pkgs.code-cursor
     pkgs.speedtest-cli
     pkgs.font-awesome
+    pkgs.nerd-fonts.jetbrains-mono
    ];
+
+   fonts.fontconfig.enable = true;
 }

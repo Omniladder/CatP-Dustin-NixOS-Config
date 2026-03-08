@@ -6,6 +6,6 @@
         cargo
         go
         nodejs
-        brightnessctl
+        zsh-powerlevel10k
     ];
 }

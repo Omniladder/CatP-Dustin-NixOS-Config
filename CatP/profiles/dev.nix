@@ -7,6 +7,7 @@
 	../modules/dev/neovim.nix
 	../modules/dev/wezterm.nix
     ../modules/dev/alacritty.nix
+    ../modules/dev/zsh.nix
 
     # Languages
     ../modules/languages/c.nix

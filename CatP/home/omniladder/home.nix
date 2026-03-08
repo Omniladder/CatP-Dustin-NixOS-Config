@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 {
     home.stateVersion = "25.11";
     programs.home-manager.enable = true;
@@ -27,10 +27,12 @@
     xdg.enable = true;
     
     xdg.configFile."wallpapers/nix.png".source = ./assets/nix.png;
-    xdg.configFile."niri/".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/flakes/niri";
+    xdg.configFile."niri".source = ./config/niri;
     xdg.configFile."eww".source = ./config/eww;
+    xdg.configFile."alacritty".source = ./config/alacritty;
     home.file.".config/environment.d/10-ozone.conf".text = ''
       NIXOS_OZONE_WL=1
     '';
+    home.file.".p10k.zsh".source = ./config/.p10k.zsh;
 
 }
