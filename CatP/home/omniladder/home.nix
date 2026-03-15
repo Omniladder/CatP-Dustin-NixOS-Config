@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
     home.stateVersion = "25.11";
     programs.home-manager.enable = true;
@@ -50,6 +50,7 @@
     xdg.configFile."niri".source = ./config/niri;
     xdg.configFile."eww".source = ./config/eww;
     xdg.configFile."alacritty".source = ./config/alacritty;
+    xdg.configFile."rofi".source = ./config/rofi;
     home.file.".config/environment.d/10-ozone.conf".text = ''
       NIXOS_OZONE_WL=1
     '';

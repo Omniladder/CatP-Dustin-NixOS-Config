@@ -4,7 +4,7 @@
    imports = [
 
     # Tools
-      ../modules/browser/firefox.nix
+      ../modules/browser/browsers.nix
       ../modules/desktop/sway.nix
       ../modules/desktop/rofi.nix
 

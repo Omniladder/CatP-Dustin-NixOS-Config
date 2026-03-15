@@ -1,0 +1,15 @@
+@theme "~/.config/rofi/catppuccin.rasi"
+
+configuration {
+  modi: "drun,ssh";
+  show-icons: true;
+  display-drun: "";
+  drun-use-desktop-cache: true;
+  drun-display-format: "{name}";
+  matching: "fuzzy";
+  sort: true;
+  drun-show-actions: false;
+  icon-theme: "Papirus-Dark";
+}
+
+

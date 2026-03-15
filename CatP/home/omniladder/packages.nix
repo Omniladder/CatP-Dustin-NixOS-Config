@@ -7,6 +7,7 @@
     pkgs.font-awesome
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.catppuccin-cursors.mochaMauve
+    pkgs.papirus-icon-theme
    ];
 
    fonts.fontconfig.enable = true;
