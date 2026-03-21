@@ -43,6 +43,9 @@
     xdg.configFile."alacritty".source = ./config/alacritty;
     xdg.configFile."rofi".source = ./config/rofi;
     xdg.configFile."Kvantum".source = ./config/kvantum;
+    xdg.configFile."mako".source = ./config/mako;
+
+
     xdg.configFile."Kvantum/catppuccin-mocha-blue".source = ./config/kvantum/catppuccin-mocha-blue;
     home.file.".config/environment.d/10-ozone.conf".text = ''
       NIXOS_OZONE_WL=1
