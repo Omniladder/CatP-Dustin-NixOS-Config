@@ -1,15 +1,13 @@
 
 ## Setup Program
 
-File Explorer: Dolphin
+File Explorer: (Terminal Based one)
 Notification Daemon: Mako
-Authentication Agent: Polkit & HyprPolkitAgent
-Clipboard: WL_Paste
-Bluetooth: Bluez (Backend/Low-level) & Blueman
-Idle Manager: Hypridle
-Screen Locker: Swaylock
-Image Viewer: Loupe
-Theme: lxappearance (Manager), Grubbox-dark (Scheme)
-Power Menu: wlogout
+Clipboard: 
+Bluetooth: 
+Idle Manager: 
+Screen Locker: 
+Image Viewer: 
+Handle QT color scheme
 Multiplexer: tmux
 

@@ -1,1 +1,1 @@
-sudo nixos-rebuild switch --flake .#CatP --show-trace
+sudo nixos-rebuild build --flake .#CatP --show-trace

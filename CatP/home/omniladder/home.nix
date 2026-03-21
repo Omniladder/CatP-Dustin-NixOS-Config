@@ -30,15 +30,6 @@
         XCURSOR_SIZE = "24";
     };
 
-  gtk = {
-    enable = true;
-    cursorTheme = {
-      package = pkgs.catppuccin-cursors.mochaDark;
-      name = "catppuccin-mocha-dark-cursors";
-      size = 24;
-    };
-  };
-
     programs.git.settings = {
         user.name = "Omniladder";
 	    user.email = "dustintobrien@gmail.com";
@@ -51,6 +42,8 @@
     xdg.configFile."eww".source = ./config/eww;
     xdg.configFile."alacritty".source = ./config/alacritty;
     xdg.configFile."rofi".source = ./config/rofi;
+    xdg.configFile."Kvantum".source = ./config/kvantum;
+    xdg.configFile."Kvantum/catppuccin-mocha-blue".source = ./config/kvantum/catppuccin-mocha-blue;
     home.file.".config/environment.d/10-ozone.conf".text = ''
       NIXOS_OZONE_WL=1
     '';
