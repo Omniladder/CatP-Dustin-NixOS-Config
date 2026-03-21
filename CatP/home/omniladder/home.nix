@@ -44,6 +44,7 @@
     xdg.configFile."rofi".source = ./config/rofi;
     xdg.configFile."Kvantum".source = ./config/kvantum;
     xdg.configFile."mako".source = ./config/mako;
+    xdg.configFile."swaylock".source = ./config/swaylock;
 
 
     xdg.configFile."Kvantum/catppuccin-mocha-blue".source = ./config/kvantum/catppuccin-mocha-blue;
