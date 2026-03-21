@@ -8,6 +8,7 @@
 	../modules/dev/wezterm.nix
     ../modules/dev/alacritty.nix
     ../modules/dev/zsh.nix
+    ../modules/dev/tmux.nix
 
     # Languages
     ../modules/languages/c.nix

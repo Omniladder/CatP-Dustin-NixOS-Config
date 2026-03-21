@@ -40,11 +40,11 @@
     "nvim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1769922831,
-        "narHash": "sha256-AqjPax41PE++9bOisl6V0aNEDHuzI0XBv4llSBpx1XQ=",
+        "lastModified": 1774131217,
+        "narHash": "sha256-cXnOIUZcR2DgzY4YbI0v2IS2B6Qu4cz/KKScJmWnGWY=",
         "owner": "Omniladder",
         "repo": "nvim-config",
-        "rev": "5d18e759837cc82d5aa5d08e468d03b57c78b74c",
+        "rev": "d6de3f76ea667bfb771fda23b2e47bb1daab8f43",
         "type": "github"
       },
       "original": {

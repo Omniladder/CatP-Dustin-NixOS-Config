@@ -25,6 +25,18 @@
 
         initContent = ''
             [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+            if [[ -o interactive ]] && [[ -z "$TMUX" ]] && [[ -t 1 ]]; then
+                if tmux has-session -t main 2>/dev/null; then
+                    attached="$(tmux display-message -p -t main '#{session_attached}' 2>/dev/null)"
+                        if [[ "$attached" -gt 0 ]]; then
+                            exec tmux new-session
+                        else
+                            exec tmux attach-session -t main
+                                fi
+                else
+                    exec tmux new-session -s main
+                fi
+            fi
         '';
     };
 

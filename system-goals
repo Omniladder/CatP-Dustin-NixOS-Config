@@ -7,6 +7,7 @@ Bluetooth:
 Idle Manager: 
 Screen Locker: 
 Image Viewer: 
-Handle QT color scheme
-Multiplexer: tmux
 
+Handle QT color scheme
+alias to build
+alias to add package
