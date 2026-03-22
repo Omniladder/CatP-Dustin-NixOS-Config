@@ -1,0 +1,28 @@
+# Edit this configuration file to define what should be installed on
+# your system. Help is available in the configuration.nix(5) man page, on
+# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
+
+{ ... }:
+
+{
+
+    programs.zsh.enable = true;
+
+    hardware.bluetooth.enable = true;
+    hardware.bluetooth.powerOnBoot = true;
+
+    imports =
+    [       
+      ./hardware-configuration.nix
+      ./users.nix
+      ../../profiles/system.nix
+    ];
+    system.stateVersion = "25.11";
+    networking.hostName = "DesktopNix"; # Define your hostname.
+
+    nixpkgs.config.allowUnfree = true;
+
+    time.timeZone = "America/New_York";
+     
+}
+
