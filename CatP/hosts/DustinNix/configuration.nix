@@ -8,6 +8,9 @@
 
     programs.zsh.enable = true;
 
+    hardware.bluetooth.enable = true;
+    hardware.bluetooth.powerOnBoot = true;
+
     imports =
     [       
       ./hardware-configuration.nix
