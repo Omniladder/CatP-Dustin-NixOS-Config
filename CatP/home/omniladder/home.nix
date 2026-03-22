@@ -53,4 +53,9 @@
     '';
     home.file.".p10k.zsh".source = ./config/.p10k.zsh;
 
+    programs.zsh.shellAliases = {
+        switch = "sudo nixos-rebuild switch --flake .#CatP --show-trace";
+        packages = "nvim ~/flakes/CatP/home/omniladder/packages.nix";
+    };
+
 }
