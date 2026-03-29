@@ -37,6 +37,7 @@
                     exec tmux new-session -s main
                 fi
             fi
+            export MANPAGER="nvim +Man!"
         '';
     };
 
