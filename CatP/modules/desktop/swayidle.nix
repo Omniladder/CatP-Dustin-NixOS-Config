@@ -7,16 +7,16 @@
 
     timeouts = [
       {
-        timeout = 120;
+        timeout = 600;
         command = "${pkgs.swaylock-effects}/bin/swaylock -f";
       }
       {
-        timeout = 160;
+        timeout = 720;
         command = "${pkgs.niri}/bin/niri msg action power-off-monitors";
         resumeCommand = "${pkgs.niri}/bin/niri msg action power-on-monitors";
       }
       {
-        timeout = 400;
+        timeout = 6000;
         command = "${pkgs.systemd}/bin/systemctl suspend";
       }
     ];

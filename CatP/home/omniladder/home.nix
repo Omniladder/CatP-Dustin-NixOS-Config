@@ -56,6 +56,7 @@
     programs.zsh.shellAliases = {
         switch = "sudo nixos-rebuild switch --flake /home/omniladder/flakes#CatP --show-trace";
         packages = "nvim ~/flakes/CatP/home/omniladder/packages.nix";
+        flakes = "nvim ~/flakes";
     };
 
 }

@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
     home.packages = [
+        pkgs.claude-code
         pkgs.fastfetch
         pkgs.code-cursor
         pkgs.speedtest-cli
