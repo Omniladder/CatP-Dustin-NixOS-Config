@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/update-system-specs.sh",
+            "timeout": 10,
+            "statusMessage": "Checking for system spec updates..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'if [ -f \"$CLAUDE_PROJECT_DIR/.claude/needs-specs-update\" ]; then echo \"⚠️  System specs may be outdated. Modified files:\"; cat \"$CLAUDE_PROJECT_DIR/.claude/needs-specs-update\"; echo \"\"; echo \"Run /update-specs to regenerate system-specs.md\"; fi'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

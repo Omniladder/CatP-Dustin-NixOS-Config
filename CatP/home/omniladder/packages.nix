@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+    # Personal user packages
     home.packages = [
         pkgs.claude-code
         pkgs.fastfetch
@@ -15,6 +16,11 @@
         pkgs.discord
         pkgs.vesktop
         pkgs.vscode
+        pkgs.tcpdump
+        pkgs.wl-clipboard
+        pkgs.nmap
+        pkgs.texliveFull
+        pkgs.jq
         ];
 
     fonts.fontconfig.enable = true;

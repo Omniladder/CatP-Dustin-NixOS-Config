@@ -11,6 +11,8 @@
     hardware.bluetooth.enable = true;
     hardware.bluetooth.powerOnBoot = true;
 
+    services.tailscale.enable = true;
+
     imports =
     [       
       ./hardware-configuration.nix
